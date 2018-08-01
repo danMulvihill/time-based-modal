@@ -1,9 +1,43 @@
 body{
     background: #fff;
 }
-container{
-    /* background: #fff;
-    opacity: 1.0 */
+#container{
+    width: 99%;
+    margin: 10px auto;
+}
+
+header{
+    position: absolute;
+    height: 500px;
+    top: 0;
+    padding: 10px;
+    /* background-image: url("../images/water-works.jpg"); */
+    /* background-size: 100%; */
+}
+
+#header-p{
+    color: white;
+
+    margin-top: 20%;
+    bottom: 10px;
+    font-size: 1.4em;
+    padding: 10px;
+}
+
+
+ h1{
+     font-size: 3em;
+ }
+
+#img1{
+    width: 100%;
+
+}
+
+#img2{
+    float: right;
+    padding-left: 5px;
+    width: 350px;
 }
 
 #modal{
