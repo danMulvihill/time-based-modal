@@ -1,32 +1,40 @@
 
-var arr = function(N){
+var cookie = Cookies.get('visited')
 
-    let arr = [];
-    for (let i = 0; i > N; i++){
-      arr.push(i);
+if( !cookie ){
+    console.log("in if: "+Cookies.get('visited'))
+    setTimeout(function(){
+        document.querySelector("#modal").style = "display:block;";
+        document.querySelector("body").style="background: #555";
+    }, 3000)
+    
+    var closeButton = document.querySelector("#x-button");
+    
+    closeButton.onclick = function(){
+        document.querySelector("#modal").style = "display:none";
+        document.querySelector("body").style="background: #fff";
     }
-  return arr;
-}
-console.log(arr(4));
-      
+    
+    var closeButton2 = document.querySelector("#more-button");
+    
+    closeButton2.onclick = function(){
+        document.querySelector("#modal").style = "display:none";
+        document.querySelector("body").style="background: #fff";
+    }
 
+    Cookies.set("visited", "visitor");
 
-
-setTimeout(function(){
-    document.querySelector("#modal").style = "display:block;";
-    document.querySelector("body").style="background: #555";
-}, 3000)
-
-var closeButton = document.querySelector("#x-button");
-
-closeButton.onclick = function(){
-    document.querySelector("#modal").style = "display:none";
-    document.querySelector("body").style="background: #fff";
+}else{
+    
+    
+    console.log(Cookies.get('visited')+": you've been have before")
 }
 
-var closeButton2 = document.querySelector("#more-button");
 
-closeButton2.onclick = function(){
-    document.querySelector("#modal").style = "display:none";
-    document.querySelector("body").style="background: #fff";
-}
+
+
+// if(document.querySelector('body').classList.contains('green')){
+//     document.querySelector('body').classList.remove('green')
+// }else{
+//     document.querySelector('body').className
+// }
